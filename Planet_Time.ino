@@ -7,7 +7,7 @@
 #define SPI_SCK 15  //13
 #define SPI_DO 16 //11
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS,  TFT_DC, TFT_RST);
-// LCD 128 x 160
+// LCD 128 x 160 -- ALL lines above are specifict to the SainSmart 1.8" TFT LCD, Change to suit your hardware
 
 // TO DO all arrays set at 10 to allow 9 planets - only 7 fit on this LCD so two slots are wasted
 int Num_Planets = 7;
@@ -50,7 +50,7 @@ void setup() {
   tft.setCursor(105, 5);
   tft.print("HH:MM:SS");
 
-  for (int i = 0; i < Num_Planets; i++) {   // Run both functions once for each planet to display all clocks, also sets all seconds to 1
+  for (int i = 0; i < Num_Planets; i++) {       // Run both functions once for each planet to display all clocks, also sets all seconds to 1
     StepUp(i);
     DisplayMe(i);
   }
@@ -82,6 +82,8 @@ void StepUp(int PlanetNum) {
 }
 
 void DisplayMe(int PlanetNum) {
+  // This function prints to the LCD - Change all code below to suit your hardware
+  
   // 0:Mercury 1:Venus 2:Earth 3:Mars 4:Jupiter 5:Saturn 6:Uranus 7:Neptune
   // TO DO find a way to use a variable to set color - char required but string to char didn't work
   switch (PlanetNum) {                          // Sets the text color for each planet                
