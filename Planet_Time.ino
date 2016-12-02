@@ -1,7 +1,6 @@
 #include <Adafruit_GFX.h>         //Core graphics library
 #include <Adafruit_ST7735.h>      //Hardware-specific library
 #include <SPI.h>                  //Interface for LCD
-#include <Fonts/FreeSans9pt7b.h>  //Font for D 2 3 4
 #define TFT_CS 10                 //SPI Pins
 #define TFT_RST 8
 #define TFT_DC 9
@@ -17,7 +16,7 @@ int Num_Planets = 7;
 
 // Display
 String Planet[10] = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
-int PrintY[10] = {20, 35, 50, 65, 80, 95, 110, 125, 140, 155};
+int PrintY[10] = {20, 35, 50, 65, 80, 95, 110, 125, 140, 155};  // Y axis location of each display row
 
 int Seconds[10];
 int Minutes[10];
