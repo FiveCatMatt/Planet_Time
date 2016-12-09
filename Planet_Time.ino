@@ -74,7 +74,7 @@ void StepUp(int PlanetNum) {
         Hours[PlanetNum] = 0;
         Days[PlanetNum]++;
         if (Days[PlanetNum] == 99) {
-          Days[PlanetNum] == 0;
+          Days[PlanetNum] = 0;
         }
       }
     }
